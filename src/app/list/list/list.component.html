@@ -1,0 +1,19 @@
+<p>list works!</p>
+ 
+ <div *ngIf="listItems.length > 0 && itemDeleted">
+    <small>Item deleted  = {{itemDeleted}}</small>
+</div> 
+
+<div *ngIf="listItems.length > 0 else notFound"> 
+<ul>
+    <li *ngFor="let item of listItems;">
+        {{item}}
+    </li>
+</ul>
+
+<button (click)="deleteItem();">Delete</button>
+</div>
+
+<ng-template #notFound>
+<small>Items not found</small>
+</ng-template>
