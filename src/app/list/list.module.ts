@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { ListComponent } from "./list/list.component";
@@ -10,7 +11,8 @@ import { ListComponent } from "./list/list.component";
         ListComponent
     ],
     imports:[
-        BrowserModule
+        BrowserModule,
+        CommonModule
     ],
     exports:[
        ListComponent 
